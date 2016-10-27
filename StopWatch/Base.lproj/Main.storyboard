@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QkQ-ul-7pb">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="95r-yt-JLC"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Stopwatch" id="bSB-eO-Na3">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="DsC-yw-Tue">
+                                            <connections>
+                                                <action selector="play:" destination="BYZ-38-t0r" id="YV3-GF-mx6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwu-Lb-oIu">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="IbX-JI-VwC"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="stop" id="CGe-u2-8Vb">
+                                        <connections>
+                                            <action selector="reset:" destination="BYZ-38-t0r" id="lTv-uR-pLA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9cE-2W-YzX"/>
+                                    <barButtonItem systemItem="pause" id="k47-JY-fhC">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="NT2-HQ-as5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfj-zc-6ln">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="clj-nO-jMs"/>
+                                    <constraint firstAttribute="height" constant="98" id="uOd-0e-SmM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QkQ-ul-7pb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="2bi-Qp-IFO"/>
+                            <constraint firstAttribute="trailing" secondItem="QkQ-ul-7pb" secondAttribute="trailing" id="2vI-Pc-afy"/>
+                            <constraint firstItem="vfj-zc-6ln" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CkQ-3c-ifu"/>
+                            <constraint firstItem="vfj-zc-6ln" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b8P-JL-blW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dwu-Lb-oIu" secondAttribute="bottom" id="giK-Ab-6RQ"/>
+                            <constraint firstItem="dwu-Lb-oIu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hOU-H5-yvS"/>
+                            <constraint firstAttribute="trailing" secondItem="dwu-Lb-oIu" secondAttribute="trailing" id="jyY-cj-41W"/>
+                            <constraint firstItem="QkQ-ul-7pb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nTP-83-OfL"/>
+                            <constraint firstItem="vfj-zc-6ln" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="r59-bj-ty7"/>
+                            <constraint firstItem="vfj-zc-6ln" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="x8v-Pd-BWT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timerLabel" destination="vfj-zc-6ln" id="PUb-sD-zhf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
